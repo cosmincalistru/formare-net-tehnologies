@@ -1,11 +1,11 @@
-package time;
+package project.java.time;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class TimeCheck {
+public class TimeCheckMain {
 
 	public static void main(String[] args) {
 

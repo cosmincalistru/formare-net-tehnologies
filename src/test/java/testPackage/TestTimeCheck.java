@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import time.TimeCheck;
+import project.java.time.TimeCheckMain;
 
 
 public class TestTimeCheck {
@@ -12,7 +12,7 @@ public class TestTimeCheck {
 	@Test
 	public void generareString_dupa() {
 
-		String s = TimeCheck.generareString("2018-12-25");
+		String s = TimeCheckMain.generareString("2018-12-25");
 
 		assertEquals(s, "2018-12-25 | Da          | Dupa         | 145");
 
@@ -21,7 +21,7 @@ public class TestTimeCheck {
 	@Test
 	public void generareString_inainte() {
 
-		String s = TimeCheck.generareString("2018-01-26");
+		String s = TimeCheckMain.generareString("2018-01-26");
 
 		assertEquals(s, "2018-01-26 | Da          | Inainte      | 187");
 
@@ -30,7 +30,7 @@ public class TestTimeCheck {
 	@Test
 	public void generareString_egal() {
 
-		String s = TimeCheck.generareString("2018-08-01");
+		String s = TimeCheckMain.generareString("2018-08-01");
 
 		assertEquals(s, "2018-08-01 | Da          | Egal         | 0");
 
@@ -39,7 +39,7 @@ public class TestTimeCheck {
 	@Test
 	public void generareString_eronat() {
 
-		String s = TimeCheck.generareString("asd");
+		String s = TimeCheckMain.generareString("asd");
 
 		assertEquals(s, "asd        | Nu          |               ");
 
