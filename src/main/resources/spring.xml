@@ -53,4 +53,13 @@
 	<bean id="employeeDAO" class="project.java.DAOImpl.EmployeeDAOImpl">
 		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</bean>
+	<bean id="userDAO" class="project.java.DAOImpl.UserDAOImpl">
+		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+	</bean>
+	<bean id="importEmployeesService" class="project.java.webservices.ImportEmployeesService">
+    	<property name="inputFolder" value="C:\Users\csterescu\Desktop\database-upload"/>
+    	<property name="outputFolder" value="C:\Users\csterescu\Desktop\database-upload\done"/>
+    	<property name="employeeDAO" ref="employeeDAO"/>
+    	<property name="userDAO" ref="userDAO"/>
+  	</bean>
 </beans>

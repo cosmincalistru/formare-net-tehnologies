@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -26,10 +25,6 @@ public class EmployeesEntity {
 	@OneToOne
 	@JoinColumn(name = "id_user")
 	private UsersEntity userId;
-
-	@ManyToOne
-	@JoinColumn(name = "id_projects")
-	private ProjectsEntity projectsId;
 
 	@Column(name = "first_name")
 	private String firstName;
@@ -57,14 +52,6 @@ public class EmployeesEntity {
 
 	public void setUserId(UsersEntity userId) {
 		this.userId = userId;
-	}
-
-	public ProjectsEntity getProjectsId() {
-		return projectsId;
-	}
-
-	public void setProjectsId(ProjectsEntity projectsId) {
-		this.projectsId = projectsId;
 	}
 
 	public String getFirstName() {
@@ -101,8 +88,8 @@ public class EmployeesEntity {
 
 	@Override
 	public String toString() {
-		return "EmployeesEntity [id=" + id + ", userId=" + userId + ", projectsId=" + projectsId + ", firstName="
-				+ firstName + ", lastName=" + lastName + ", email=" + email + ", dateOfBirth=" + dateOfBirth + "]";
+		return "EmployeesEntity [id=" + id + ", userId=" + userId + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", email=" + email + ", dateOfBirth=" + dateOfBirth + "]";
 	}
 
 }

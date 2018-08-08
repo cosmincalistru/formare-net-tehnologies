@@ -21,14 +21,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 
 	@Override
-	public void save(EmployeesEntity e) {
+	public EmployeesEntity save(EmployeesEntity e) {
 
 		Session session = this.sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		session.persist(e);
 		tx.commit();
 		session.close();
-
+		return e;
 	}
 
 	@SuppressWarnings("unchecked")
