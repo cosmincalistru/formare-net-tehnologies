@@ -9,9 +9,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://localhost:5433/postgres" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/postgres" />
 		<property name="username" value="postgres" />
-		<property name="password" value="1234" />
+		<property name="password" value="root" />
 	</bean>
 
 <!-- Hibernate 3 XML SessionFactory Bean definition-->
@@ -53,4 +53,31 @@
 	<bean id="employeeDAO" class="project.java.DAOImpl.EmployeeDAOImpl">
 		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</bean>
+
+	<bean id="userDAO" class="project.java.DAOImpl.UserDAOImpl">
+		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+	</bean>
+
+	<!--<bean id="projectDAO" class="project.java.DAOImpl.ProjectDAOImpl">-->
+		<!--<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />-->
+	<!--</bean>-->
+
+	<!--<bean id="workerDAO" class="project.java.DAOImpl.WorkerDAOImpl">-->
+		<!--<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />-->
+	<!--</bean>-->
+
+	<bean id="employeeService" class="project.java.services.EmployeeService">
+		<property name="inputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input"/>
+		<property name="doneFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input\done"/>
+		<property name="employeeDAO" ref="employeeDAO"/>
+		<property name="userDAO" ref="userDAO"/>
+	</bean>
+
+	<!--<bean id="projectService" class="project.java.services.ProjectService">-->
+		<!--<property name="inputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input"/>-->
+		<!--<property name="outputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\output"/>-->
+		<!--<property name="doneFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input\done"/>-->
+		<!--<property name="projectDAO" ref="projectDAO"/>-->
+		<!--<property name="workerDAO" ref="workerDAO"/>-->
+	<!--</bean>-->
 </beans>

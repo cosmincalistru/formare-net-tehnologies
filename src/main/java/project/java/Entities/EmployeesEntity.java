@@ -25,7 +25,7 @@ public class EmployeesEntity {
 
 	@OneToOne
 	@JoinColumn(name = "id_user")
-	private UsersEntity userId;
+	private UsersEntity user;
 
 	@ManyToOne
 	@JoinColumn(name = "id_projects")
@@ -51,12 +51,12 @@ public class EmployeesEntity {
 		this.id = id;
 	}
 
-	public UsersEntity getUserId() {
-		return userId;
+	public UsersEntity getUser() {
+		return user;
 	}
 
-	public void setUserId(UsersEntity userId) {
-		this.userId = userId;
+	public void setUser(UsersEntity user) {
+		this.user = user;
 	}
 
 	public ProjectsEntity getProjectsId() {
@@ -101,7 +101,7 @@ public class EmployeesEntity {
 
 	@Override
 	public String toString() {
-		return "EmployeesEntity [id=" + id + ", userId=" + userId + ", projectsId=" + projectsId + ", firstName="
+		return "EmployeesEntity [id=" + id + ", user=" + user + ", projectsId=" + projectsId + ", firstName="
 				+ firstName + ", lastName=" + lastName + ", email=" + email + ", dateOfBirth=" + dateOfBirth + "]";
 	}
 

@@ -5,7 +5,7 @@ import project.java.Entities.EmployeesEntity;
 
 public interface EmployeeDAO {
 	
-	public void save(EmployeesEntity e);
+	public EmployeesEntity save(EmployeesEntity e);
 	
 	public List<EmployeesEntity> list();
 	
