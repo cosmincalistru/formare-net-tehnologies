@@ -52,9 +52,16 @@
     </bean>
     <tx:annotation-driven />
 
+    <bean id="csvReaderService" class="com.training.services.CsvReaderService">
+        <property name="inputFolder" value="D:\formare\files"/>
+        <property name="outputFolder" value="D:\formare\files\done"/>
+    </bean>
+
 
     <context:annotation-config />
-    <bean name="Main" class="com.training.main.Exercitiul1"></bean>
+    <bean name="Main1" class="com.training.main.Exercitiul1"></bean>
+    <bean name="Main4" class="com.training.main.Exercitiul4"></bean>
+
     <context:component-scan base-package="com.training.dao" />
     <!--
       Configure Spring Data JPA and set the base package of the

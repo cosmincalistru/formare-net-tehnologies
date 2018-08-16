@@ -14,4 +14,6 @@ public interface EmployeeDao extends JpaRepository<Employee,Long> {
    Employee save(Employee employee);
 
     void deleteById(Long aLong);
+
+    Employee findByLastNameAndEmail(String lastName,String email);
 }
