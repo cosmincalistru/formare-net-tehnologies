@@ -14,4 +14,6 @@ public interface ProjectDao extends JpaRepository<Project, Long> {
     Project save(Project s);
 
     void deleteById(Long id);
+
+    Project findByName(String name);
 }

@@ -102,7 +102,6 @@ public class CsvReaderService {
     }
 
     private void readLines(String[] nextRecord, int line) {
-        StringBuilder sb = new StringBuilder();
         String lastName = nextRecord[0];
         String firstName = nextRecord[1];
         String email = nextRecord[2];
