@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -25,6 +26,10 @@ public class UsersEntity {
 	@Column(name = "password")
 	private String password;
 
+	@OneToOne(mappedBy="userId")
+	private EmployeesEntity employee;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -47,6 +52,14 @@ public class UsersEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public EmployeesEntity getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(EmployeesEntity employee) {
+		this.employee = employee;
 	}
 
 	@Override

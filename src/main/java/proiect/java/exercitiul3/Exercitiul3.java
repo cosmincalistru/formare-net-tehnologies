@@ -19,14 +19,6 @@ public class Exercitiul3 {
 		employeeService.tratament();
 		employeeService.moveFile();
 
-		try {
-
-		} catch (Exception e) {
-
-			e.printStackTrace();
-
-		}
-
 	}
 
 }

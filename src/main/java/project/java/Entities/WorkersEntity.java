@@ -26,6 +26,10 @@ public class WorkersEntity {
 	@JoinColumn(name = "id_projects")
 	private ProjectsEntity projectsId;
 
+	@ManyToOne
+	@JoinColumn(name = "id_employees")
+	private EmployeesEntity employeeId;
+
 	@Column(name = "date_start")
 	private Date startDate;
 
@@ -64,10 +68,18 @@ public class WorkersEntity {
 		this.endDate = endDate;
 	}
 
+	public EmployeesEntity getEmployee() {
+		return employeeId;
+	}
+
+	public void setEmployee(EmployeesEntity employeeId) {
+		this.employeeId = employeeId;
+	}
+
 	@Override
 	public String toString() {
-		return "WorkersEntity [id=" + id + ", projectsId=" + projectsId + ", startDate=" + startDate + ", endDate="
-				+ endDate + "]";
+		return "WorkersEntity [id=" + id + ", projectsId=" + projectsId + ", employee=" + employeeId + ", startDate="
+				+ startDate + ", endDate=" + endDate + "]";
 	}
 
 }

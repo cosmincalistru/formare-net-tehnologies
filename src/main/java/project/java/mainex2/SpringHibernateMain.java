@@ -17,7 +17,7 @@ public class SpringHibernateMain {
 
 		EmployeeDAO employeeDAO = context.getBean(EmployeeDAO.class);
 
-		List<EmployeesEntity> employeesList = employeeDAO.list();
+		List<EmployeesEntity> employeesList = employeeDAO.getAllImployees();
 
 		for (EmployeesEntity em : employeesList) {
 

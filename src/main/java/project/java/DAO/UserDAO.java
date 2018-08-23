@@ -4,7 +4,10 @@ import project.java.Entities.UsersEntity;
 import project.java.dto.UserDTO;
 
 public interface UserDAO {
-		public void insertIntoUsers(UserDTO user);
 
-		public UsersEntity save(UsersEntity u);
+	public void insertIntoUsers(UserDTO user);
+
+	public UsersEntity save(UsersEntity u);
+
+	public UsersEntity findByUsername(String username);
 }

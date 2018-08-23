@@ -8,7 +8,7 @@ public interface EmployeeDAO {
 
 	public EmployeesEntity save(EmployeesEntity e);
 
-	public List<EmployeesEntity> list();
+	public List<EmployeesEntity> getAllImployees();
 
 	public EmployeesEntity getEmployeesById(long id);
 

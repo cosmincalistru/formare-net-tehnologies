@@ -1,8 +1,10 @@
 package project.java.DAOImpl;
 
+import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
+import org.hibernate.criterion.Restrictions;
 
 import project.java.DAO.UserDAO;
 import project.java.Entities.UsersEntity;
@@ -42,6 +44,18 @@ public class UserDAOImpl implements UserDAO {
 
 		session.getTransaction().commit();
 		session.close();
+
+	}
+
+	public UsersEntity findByUsername(String name) {
+
+		Session session = this.sessionFactory.getCurrentSession();
+		session.beginTransaction();
+
+		Criteria criteria = session.createCriteria(UsersEntity.class);
+		UsersEntity yourObject = (UsersEntity) criteria.add(Restrictions.eq("userName", name)).uniqueResult();
+
+		return yourObject;
 
 	}
 

@@ -33,7 +33,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<EmployeesEntity> list() {
+	public List<EmployeesEntity> getAllImployees() {
 
 		Session session = this.sessionFactory.openSession();
 
