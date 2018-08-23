@@ -11,4 +11,6 @@ public interface UserDAO {
     public List<UsersEntity> list();
 
     public UsersEntity getUsersById(long id);
+
+    public UsersEntity getUsersByName(String name);
 }

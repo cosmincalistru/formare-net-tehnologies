@@ -1,15 +1,14 @@
 package project.java.DAOImpl;
 
-import org.hibernate.Hibernate;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
+import org.hibernate.criterion.Restrictions;
 import project.java.DAO.UserDAO;
 import project.java.Entities.UsersEntity;
 
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
+
     private SessionFactory sessionFactory;
 
     public void setSessionFactory(SessionFactory sessionFactory) {
@@ -37,10 +36,10 @@ public class UserDAOImpl implements UserDAO {
 
         Session session = this.sessionFactory.openSession();
 
-        List<UsersEntity> employeesList = session.createQuery("from EmployeesEntity").list();
+        List<UsersEntity> usersList = session.createQuery("from UsersEntity").list();
         session.close();
 
-        return employeesList;
+        return usersList;
     }
 
     @Override
@@ -52,5 +51,18 @@ public class UserDAOImpl implements UserDAO {
         Hibernate.initialize(employee);
 
         return employee;
+    }
+
+    @Override
+    public UsersEntity getUsersByName(String name) {
+        Session session = this.sessionFactory.openSession();
+
+        Criteria criteria = session.createCriteria(UsersEntity.class);
+        criteria.add(Restrictions.eq("userName", name));
+        List result = criteria.list();
+
+        session.close();
+
+        return result.isEmpty() ? null : (UsersEntity)result.get(0);
     }
 }

@@ -2,13 +2,12 @@ package project.java.DAOImpl;
 
 import java.util.List;
 
-import org.hibernate.Hibernate;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 
+import org.hibernate.criterion.Restrictions;
 import project.java.DAO.EmployeeDAO;
 import project.java.Entities.EmployeesEntity;
+import project.java.Entities.UsersEntity;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
@@ -54,6 +53,18 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		Hibernate.initialize(employee);
 
 		return employee;
+	}
+
+	@Override
+	public EmployeesEntity getEmployeeByUserId(UsersEntity userId) {
+		Session session = this.sessionFactory.openSession();
+
+		Criteria criteria = session.createCriteria(EmployeesEntity.class);
+		criteria.add(Restrictions.eq("user.id", userId.getId()));
+		List result = criteria.list();
+
+		session.close();
+		return result.isEmpty() ? null : (EmployeesEntity)result.get(0);
 	}
 
 }

@@ -18,6 +18,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EmployeeService {
+    
+    private final static GlobalService globalService = new GlobalService();
 
     private String inputFolder;
     private String doneFolder;
@@ -88,16 +90,6 @@ public class EmployeeService {
         return files.length == 0 ? null : files[0];
     }
 
-    private UserDTO getUser(String username, String password){
-
-        UserDTO user = new UserDTO();
-
-        user.setUsername(username);
-        user.setPassword(password);
-
-        return user;
-    }
-
     private UsersEntity saveUser(UserDTO userDTO){
 
         UsersEntity usersEntity = new UsersEntity();
@@ -112,25 +104,6 @@ public class EmployeeService {
         }
 
         return null;
-    }
-
-    private EmployeeDTO getEmployee(String[] items) throws ParseException {
-
-        EmployeeDTO employeeDTO = new EmployeeDTO();
-
-        employeeDTO.setFirstName(items[0]);
-        employeeDTO.setLastName(items[1]);
-        employeeDTO.setEmail(items[2]);
-
-        if (items.length > 3 && !items[3].equals("")) {
-            employeeDTO.setBirthDate(new SimpleDateFormat("dd-mm-yyyy").parse(items[3]));
-        }
-        if (items.length > 5) {
-            UsersEntity usersEntity = saveUser(getUser(items[4], items[5]));
-            employeeDTO.setUserID(usersEntity);
-        }
-
-        return employeeDTO;
     }
 
     private void saveEmployee (EmployeeDTO employeeDTO) {
@@ -238,7 +211,11 @@ public class EmployeeService {
                         concatError(line, error);
                         continue;
                     } else {
-                        saveEmployee(getEmployee(list));
+                        UsersEntity usersEntity = new UsersEntity();
+                        if(list.length > 5) {
+                            usersEntity = saveUser(globalService.getUser(list[4], list[5]));
+                        }
+                        saveEmployee(globalService.getEmployee(list, usersEntity));
                     }
 
 //                printMyEmployee(list);

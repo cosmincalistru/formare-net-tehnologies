@@ -2,6 +2,7 @@ package project.java.DAO;
 import java.util.List;
 
 import project.java.Entities.EmployeesEntity;
+import project.java.Entities.UsersEntity;
 
 public interface EmployeeDAO {
 	
@@ -10,5 +11,7 @@ public interface EmployeeDAO {
 	public List<EmployeesEntity> list();
 	
 	public EmployeesEntity getEmployeesById(long id);
+
+	public EmployeesEntity getEmployeeByUserId(UsersEntity userId);
 
 }

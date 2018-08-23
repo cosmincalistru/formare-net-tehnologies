@@ -27,10 +27,8 @@ public class Exercitiul4 {
 
 		}
 
-
 		EmployeeService emp = (EmployeeService) context.getBean("employeeService");
 		emp.readFromCSV();
-
 
 		context.close();
 

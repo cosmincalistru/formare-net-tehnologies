@@ -39,6 +39,7 @@
 				<value>project.java.Entities.EmployeesEntity</value>
 				<value>project.java.Entities.ProjectsEntity</value>
 				<value>project.java.Entities.UsersEntity</value>
+				<value>project.java.Entities.WorkersEntity</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -58,13 +59,13 @@
 		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
 	</bean>
 
-	<!--<bean id="projectDAO" class="project.java.DAOImpl.ProjectDAOImpl">-->
-		<!--<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />-->
-	<!--</bean>-->
+	<bean id="projectDAO" class="project.java.DAOImpl.ProjectDAOImpl">
+		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+	</bean>
 
-	<!--<bean id="workerDAO" class="project.java.DAOImpl.WorkerDAOImpl">-->
-		<!--<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />-->
-	<!--</bean>-->
+	<bean id="workerDAO" class="project.java.DAOImpl.WorkerDAOImpl">
+		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+	</bean>
 
 	<bean id="employeeService" class="project.java.services.EmployeeService">
 		<property name="inputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input"/>
@@ -73,11 +74,18 @@
 		<property name="userDAO" ref="userDAO"/>
 	</bean>
 
-	<!--<bean id="projectService" class="project.java.services.ProjectService">-->
-		<!--<property name="inputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input"/>-->
-		<!--<property name="outputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\output"/>-->
-		<!--<property name="doneFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\csv\input\done"/>-->
-		<!--<property name="projectDAO" ref="projectDAO"/>-->
-		<!--<property name="workerDAO" ref="workerDAO"/>-->
-	<!--</bean>-->
+	<bean id="projectService" class="project.java.services.ProjectService">
+		<property name="inputFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\xml\input"/>
+		<property name="doneFolder" value="C:\Projects\formare-net-tehnologies\src\main\resources\xml\input\done\"/>
+		<property name="projectDAO" ref="projectDAO"/>
+		<property name="workerDAO" ref="workerDAO"/>
+		<property name="employeeDAO" ref="employeeDAO"/>
+		<property name="userDAO" ref="userDAO"/>
+	</bean>
+
+	<bean id="globalService" class="project.java.services.GlobalService">
+		<property name="projectDAO" ref="projectDAO"/>
+		<property name="workerDAO" ref="workerDAO"/>
+	</bean>
+
 </beans>
