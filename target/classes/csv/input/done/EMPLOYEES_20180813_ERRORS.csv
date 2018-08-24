@@ -1,0 +1,4 @@
+"sep=;"
+Nume;Prenume;Email;DataNasterii;Utilizator;Parola;Motiv
+xSterescu;xCristian;cristian.sterescu@hgrup.com;;csterescu;;Combo-ul utilizator/parola sunt obligatorii impreuna 
+;Cristian;cristian.sterescu@hgrup.com;;;;;Name or/and Email is Empty or Email doesn't have a valid format 

@@ -1,0 +1,27 @@
+cazuri de test exercitiul 5.
+Se doreste introducerea in baza a urmatoarelor informatii : 
+
+Utilizatori : 
+"silviafilip"
+"mihaibucurica"
+"roxanahossu"
+"cosmincalistru"
+Fiecare utilizator trebuie sa aiba si un echivalent angajat (employee)
+
+Proiecte :
+"Dematerialization" (Client : "Vitogaz", Data i: "01-08-2012", Data s: "01-10-2018")
+"Tokheim" (Client : "Tokheim", Data i: "01-02-2015", Data s: "01-03-2017")
+"Aflelou" (Client : "Aflelou", Data i: "01-02-2015", Data s: null)
+"Unicorn" (Client : "Cycleon", Data i: "01-09-2017", Data s: null)
+"LuQi" (Client: "Argus", Data i: "01-03-2015", "Data s: null)
+
+Worker: 
+"silviafilip", "Tokheim", Data i : 01-03-2016, Data s: 01-02-2017
+"mihaibucurica", "Dematerialization", Data i : 01-01-2013, Data s: 01-10-2013
+"mihaibucurica", "Aflelou", Data i : 01-02-2017, Data s: null
+"roxanahossu", "Unicorn", Data i: 01-09-2017, Data s: null
+"cosmincalistru", "Tokheim", Data i: 01-02-2015, Data s: 28-02-2015
+
+In atasament veti gasi fisierul xml aparut in ziua in curs pe care aplicatia dvs trebuie sa il testeze dupa ce datele de mai sus sunt introduse in baza.
+
+Se asteapta 9 cazuri de eroare si 3 workeri inserati

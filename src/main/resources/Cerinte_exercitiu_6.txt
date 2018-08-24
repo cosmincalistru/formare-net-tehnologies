@@ -1,0 +1,6 @@
+Ce ar mai trebui facut la proiectul inceput de mine:
+- metoda setVacations(employee) care ar trebui sa verifice in baza de date si sa scoata toate zilele de concediu ale userului respectiv si liberele din luna respectiva si sa updateze HashMapul - raportDetails; La concedii, ideea e ca trebuie pornit de la data de start si numarul zilelor de concediu, insa atunci cand se face incrementarea datelor pentru popularea hashmapului trebuie tinut cont de weekenduri si zilele libere. Eu ma gandeam la un hashSet care sa tina toate zilele libere si weekendurile si facut un if cu hashSet.contains() si daca e true sa mearga mai departe fara sa faca nimic.
+- o metoda noua sau updatata metoda setEmployData care sa treaca prin logarile din worker pentru user-ul respectiv si sa updateze in raportDetails cheile de tipul ziua_xx_cheie
+- facut query-ul pentru metoda din workerDao findByUsernameAndReportMonth, care ar trebui sa scoata toate logarile din worker pentru un user si care sunt in luna respectiva.
+
+Ral-ul are si o celula pentru manager care ar putea fi implementata pe viitor

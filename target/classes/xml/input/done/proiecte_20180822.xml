@@ -1,0 +1,71 @@
+<proiecte>
+  <proiect nume="Aflelou">
+    <client>Aflelou</client>
+    <data_inceput>2015-02-01</data_inceput>
+    <data_sfarsit/>
+    <angajati>
+      <angajat utilizator="silviafilip">
+        <data_inceput>2015-01-01</data_inceput>
+        <data_sfarsit/>
+      </angajat>
+      <angajat utilizator="silviafilip">
+    	<data_inceput>2014-01-01</data_inceput>
+        <data_sfarsit>2015-01-01</data_sfarsit>
+      </angajat>
+      <angajat utilizator="silviafilip">
+        <data_inceput>2016-04-01</data_inceput>
+        <data_sfarsit/>
+      </angajat>
+      <angajat utilizator="silviafilip">
+        <data_inceput>2016-04-01</data_inceput>
+        <data_sfarsit>2018-03-01</data_sfarsit>
+      </angajat>
+      <angajat utilizator="silviafilip">
+        <data_inceput>2017-03-01</data_inceput>
+        <data_sfarsit/>
+      </angajat>
+    </angajati>
+  </proiect>
+  <proiect nume="Dematerialization">
+    <client>Vitogaz</client>
+    <data_inceput>2012-08-01</data_inceput>
+    <data_sfarsit>2018-10-01</data_sfarsit>
+    <angajati>
+      <angajat utilizator="roxanadafinoiu">
+        <data_inceput>2016-08-01</data_inceput>
+        <data_sfarsit>2016-10-01</data_sfarsit>
+      </angajat>
+      <angajat utilizator="roxanahossu">
+        <data_inceput>2016-02-01</data_inceput>
+        <data_sfarsit>2017-10-01</data_sfarsit>
+      </angajat>
+      <angajat utilizator="roxanahossu">
+        <data_inceput>2016-01-01</data_inceput>
+        <data_sfarsit/>
+      </angajat>
+      <angajat utilizator="roxanahossu">
+        <data_inceput>2016-08-01</data_inceput>
+        <data_sfarsit>2016-10-01</data_sfarsit>
+      </angajat>
+    </angajati>
+  </proiect>
+  <proiect nume="LuQi">
+    <client>Argus</client>
+    <data_inceput>2015-02-01</data_inceput>
+    <data_sfarsit/>
+    <angajati>
+      <angajat utilizator="cosmincalistru">
+        <data_inceput>2015-01-01</data_inceput>
+        <data_sfarsit/>
+      </angajat>
+      <angajat utilizator="cosmincalistru">
+        <data_inceput>2015-01-01</data_inceput>
+        <data_sfarsit>2015-01-31</data_sfarsit>
+      </angajat>
+      <angajat utilizator="cosmincalistru">
+        <data_inceput>2015-03-01</data_inceput>
+        <data_sfarsit/>
+      </angajat>
+    </angajati>
+  </proiect>
+</proiecte>

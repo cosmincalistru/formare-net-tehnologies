@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<erori>
+    <eroare proiect="Aflelou" utilizator="silviafilip">2015-01-01 ERROR: Datele nu se afla in intervalul corect -&gt; Worker StartDate is before Project StartDate</eroare>
+    <eroare proiect="Aflelou" utilizator="silviafilip">2014-01-01 ERROR: Datele nu se afla in intervalul corect -&gt; Worker StartDate is before Project StartDate</eroare>
+    <eroare proiect="Aflelou" utilizator="silviafilip">2016-04-01 ERROR: Worker-ul poate lucra la un singur proiect intr-o zi</eroare>
+    <eroare proiect="Aflelou" utilizator="silviafilip">2016-04-01 ERROR: Worker-ul poate lucra la un singur proiect intr-o zi</eroare>
+    <eroare proiect="Dematerialization" utilizator="roxanadafinoiu">ERROR: Utilizatorul nu exista in baza sau nu este prezent</eroare>
+    <eroare proiect="Dematerialization" utilizator="roxanahossu">2016-02-01 ERROR: Worker-ul poate lucra la un singur proiect intr-o zi</eroare>
+    <eroare proiect="Dematerialization" utilizator="roxanahossu">2016-01-01 ERROR: Worker-ul poate lucra la un singur proiect intr-o zi</eroare>
+    <eroare proiect="LuQi" utilizator="cosmincalistru">2015-01-01 ERROR: Datele nu se afla in intervalul corect -&gt; Worker StartDate is before Project StartDate</eroare>
+    <eroare proiect="LuQi" utilizator="cosmincalistru">2015-01-01 ERROR: Datele nu se afla in intervalul corect -&gt; Worker StartDate is before Project StartDate</eroare>
+</erori>

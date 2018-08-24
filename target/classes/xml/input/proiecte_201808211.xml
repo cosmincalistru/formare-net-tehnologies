@@ -1,0 +1,32 @@
+<proiecte>
+  <proiect nume="proiect gianina">
+    <client>h grup</client>
+    <data_inceput>2018-01-05</data_inceput>
+    <data_sfarsit>2018-04-01</data_sfarsit>
+    <angajati>
+      <angajat utilizator="gianinam">
+    	<data_inceput>2018-01-05</data_inceput>
+        <data_sfarsit>2018-02-01</data_sfarsit>
+      </angajat>
+	  <angajat utilizator="cosmincalistru">
+    	<data_inceput>2018-03-04</data_inceput>
+        <data_sfarsit>2018-04-01</data_sfarsit>
+      </angajat>
+	  <angajat utilizator="gianinam">
+    	<data_inceput>2018-01-05</data_inceput>
+        <data_sfarsit>2018-02-03</data_sfarsit>
+      </angajat>
+    </angajati>
+  </proiect>
+  <proiect nume="proiect vacanta">
+    <client>H N</client>
+    <data_inceput>2018-01-02</data_inceput>
+    <data_sfarsit>2018-02-04</data_sfarsit>
+    <angajati>
+      <angajat utilizator="gianinam">
+    	<data_inceput>2018-01-07</data_inceput>
+        <data_sfarsit>2018-02-01</data_sfarsit>
+      </angajat>
+    </angajati>
+  </proiect>
+</proiecte>
